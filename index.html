@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VibeFlow</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="manifest" href="manifest.json"/>
+  <link rel="icon" href="icon-192.png"/>
+</head>
+<body>
+  <div class="container">
+    <h1>VibeFlow</h1>
+    <p class="tagline">Free. Offline. Forever.</p>
+
+    <div id="uploadArea">
+      <p>Drop your MP3s here or click to upload</p>
+      <input type="file" id="fileInput" multiple accept="audio/mp3" />
+    </div>
+
+    <div id="playlist"></div>
+
+    <div id="player" class="hidden">
+      <div class="track-info">
+        <span id="title">Select a song</span>
+        <span id="progress">0:00 / 0:00</span>
+      </div>
+      <div class="controls">
+        <button id="prevBtn">Prev</button>
+        <button id="playBtn">Play</button>
+        <button id="nextBtn">Next</button>
+      </div>
+      <input type="range" id="seekBar" value="0" max="100"/>
+      <audio id="audio"></audio>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

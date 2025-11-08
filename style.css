@@ -1,0 +1,93 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+  min-height: 100vh;
+  padding: 20px;
+}
+.container { max-width: 500px; margin: auto; }
+
+h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+}
+.tagline {
+  text-align: center;
+  color: #aaa;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+#uploadArea {
+  border: 2px dashed #444;
+  padding: 40px;
+  text-align: center;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#uploadArea:hover { border-color: #4ecdc4; }
+#fileInput { display: none; }
+
+.song-item {
+  background: #1a1a1a;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.song-item:hover { background: #252525; }
+.song-item.playing { background: #4ecdc4; color: #000; }
+
+#player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #111;
+  padding: 16px;
+  border-top: 1px solid #333;  /* FIXED: Added ; */
+}
+
+.track-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+.controls button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+  margin: 0 12px;
+  cursor: pointer;
+}
+#seekBar {
+  width: 100%;
+  -webkit-appearance: none;
+  height: 6px;
+  background: #333;
+  outline: none;
+  border-radius: 3px;
+}
+#seekBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #4ecdc4;
+  border-radius: 50%;
+  cursor: pointer;
+} /* FIXED: Added missing } */
+
+.hidden { display: none; }
