@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VibeFlow</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="manifest" href="manifest.json"/>
+  <link rel="icon" href="icon-192.png"/>
+  <!-- SUPABASE JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>VibeFlow</h1>
+    <p class="tagline">Free. Offline. Shared.</p>
+
+    <!-- MODE TOGGLE BUTTON -->
+    <div style="text-align:center; margin:15px;">
+      <button id="modeBtn" style="background:#4ecdc4; color:black; padding:10px 20px; border:none; border-radius:20px; font-weight:bold; font-size:1rem;">
+        Shared Library
+      </button>
+    </div>
+
+    <div id="uploadArea">
+      <p>Drop your MP3s here or click to upload</p>
+      <input type="file" id="fileInput" multiple accept="audio/mp3" />
+    </div>
+
+    <div id="playlist"></div>
+
+    <div id="player" class="hidden">
+      <div class="track-info">
+        <span id="title">Select a song</span>
+        <span id="progress">0:00 / 0:00</span>
+      </div>
+      <div class="controls">
+        <button id="prevBtn">Prev</button>
+        <button id="playBtn">Play</button>
+        <button id="nextBtn">Next</button>
+      </div>
+      <input type="range" id="seekBar" value="0" max="100"/>
+      <audio id="audio"></audio>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
